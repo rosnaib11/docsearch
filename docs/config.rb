@@ -60,7 +60,7 @@ end
 configure :build do
   activate :minify_css
   activate :minify_javascript
-  activate :asset_hash
+  #activate :asset_hash
   activate :minify_html
   activate :autoprefixer
   activate :gzip
