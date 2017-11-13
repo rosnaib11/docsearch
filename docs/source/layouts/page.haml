@@ -1,29 +1,16 @@
 = wrap_layout :default do
   %aside.pos-fix.w100p.m300.hfull.fill-white.p-t-large.b-r.fill-athens-gray.p-l-xlarge
-    %h3
-      DocSearch
-    %ul.list-none.no-margin.no-padding
-      %li
-        %a{href:"#{app_data.config.baseurl}/documentation#introduction​"}
-          Introduction
-    %h3
-      Scraper
-    %ul.list-none.no-margin.no-padding
-      %li
-        %a{href:"#{app_data.config.baseurl}/documentation#introduction​"}
-          Overview
-      %li
-        %a{href:"#{app_data.config.baseurl}/documentation#introduction​"}
-          Parameters
+    - sitemap_tree.from_url('docsearch/documentation').get_children.each do |dir|
+      %h3
+        = unslug(dir.get_url_part)
+      %ul.list-none.no-margin.no-padding
+        - dir.get_children.each do |file|
+          %li
+            %a{href: file.get_final_url}
+              = file.get_val.metadata[:page][:title]
 
-    %h3
-      Scraper
-    %ul.list-none.no-margin.no-padding
-      %li
-        %a{href:"#{app_data.config.baseurl}/documentation#introduction​"}
-          Docsearch Autocomplete
 
-  .container.main-content.w100p{class: "#{current_page.data.className}"}
+  .container.main-content.w100p.documentation
     %header.page-header.m1200.m-l-r-auto
       %h1.page-title
         = current_page.data.title
