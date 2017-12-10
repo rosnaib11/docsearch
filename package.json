@@ -68,7 +68,7 @@
     "pretty-bytes-cli": "2.0.0",
     "semver": "5.4.1",
     "sinon": "4.1.2",
-    "uglify-js": "3.2.1",
+    "uglify-js": "3.2.2",
     "webpack": "3.10.0",
     "webpack-dev-server": "2.9.7"
   },
