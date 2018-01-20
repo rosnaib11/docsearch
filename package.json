@@ -70,7 +70,7 @@
     "sinon": "4.1.2",
     "uglify-js": "3.2.1",
     "webpack": "3.10.0",
-    "webpack-dev-server": "2.9.7"
+    "webpack-dev-server": "2.11.1"
   },
   "peerDependencies": {},
   "dependencies": {
